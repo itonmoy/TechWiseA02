@@ -155,6 +155,56 @@ nav a {
     font-size: 0.8rem;
 }
 
+/* feature-section-css */
+
+#features{
+    background-color: #120924; /* Dark purple base */
+    padding: 100px 5%;
+    color: white;
+    text-align: center
+}
+
+#features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+.features-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.features-card {
+    background: #1d1136; 
+    padding: 40px;
+    border-radius: 24px;
+    text-align: left;
+    
+}
+.features-card.headphone{
+    grid-row: span 2;
+    
+}
+.features-card.exclusive{
+    grid-column: span 2; /* Occupies two columns */
+}
+.features-card img{
+    height: 60px;
+    width: 60px;
+    margin-bottom: 20px;
+}
+.features-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+.features-card p {
+    color: #5c5b5e;
+    line-height: 1.6em;
+    font-size: 0.95rem;
+}
+
 @media screen and (max-width: 576px) {
 
     /* navigation bar css for mobile started*/
@@ -223,5 +273,18 @@ nav a {
     }
     .item p {   
         font-size: 0.6rem;
+    }
+    #features{
+        padding: 60px 15px;
+    }
+    .features-container{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .features-card.exclusive, 
+    .features-card.headphone{
+        grid-column: span 1;
+        grid-row: span 1;
     }
 }
